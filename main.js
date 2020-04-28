@@ -9,8 +9,6 @@ console.log(new Date)
 const displayDate = () => {
   const currentDate = new Date()
   document.getElementById("display-element").innerHTML = currentDate;
-  document.getElementById("dateTime").innerHTML = dateTime;
-  dateTime.createTextNode("")
 }
  
 
@@ -36,26 +34,10 @@ function stringNum () {
   // * NaN
   // * String
   
-  function dataTypes () {
-    if (typeof = Boolean) {
-      document.write("Boolean")
-    }
-    if (typeof = Null) {
-      document.write("Null")
-    }
-    if (typeof - Undefined) {
-      document.write("Undefined")
-    }
-    if (typeof = Number) {
-      document.write("Number")
-    }
-    if (typeof = NaN) {
-      document.write("NaN")
-    }
-    if (typeof = String) {
-      document.write("String")
-    }
+const get_type = (data) =>{
+  console.log(typeof(data));
   }
+  get_type(5)
 
   
 // Write a JavaScript program that adds 2 numbers together.
@@ -64,41 +46,27 @@ const add = (x, y) => {
   return (x + y);
   console.log()
 }
+add(5,9)
 
 
 // Write a JavaScript program that runs only when 2 things are true.
-
-const bothTrue = (a, b) => {
-  if (a && b = true) {
-    return true
-  }
-  else {
-    return false
-  }
-}
-
 // Write a JavaScript program that runs when 1 of 2 things are true.
+// Write a JavaScript program that runs when both things are not true. 
 
-const oneTrue = (a, b) => {
-  if (a || b = true) {
-    return true
+const checkBool = (boolFirst, boolSecond) =>{
+  if(boolFirst == true && boolSecond == true){
+  return "Both values are true";
   }
-  else {
-    return false
+  else if(boolFirst == false && boolSecond == true || boolFirst == true && boolSecond == false){
+  return "Only one of these values are true"
   }
-}
-
-
-// Write a JavaScript program that runs when both things are not true.  
-
-const bothFalse = (a, b) => {
-  if (a && b = false) {
-    return false
+  else if(boolFirst == false && boolSecond == false){
+  return "Both values are false"
   }
-  else {
-    return true
+  else{
+  return "You did not put a bool in the box! Please only put in either true or false in the input!"
   }
-}
+  }
 
 // ***************************
 //         PART TWO
