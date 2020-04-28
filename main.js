@@ -14,16 +14,34 @@ const displayDate = () => {
 
 // Write a JavaScript program to convert a number to a string.
 
-function numberCovert () {
-  let num = 15;
-  const n = num.toString();
+const numString = () => {
+  let num = document.getElementById("numberString").value
+  const numberToString = num.toString()
+  document.getElementById("number-string").innerHTML = numberToString
+  console.log(numberToString)
 }
+
+
+
+// function numString() {
+//   let num = 15;
+//   const numberToString = num.toString();
+// }
 
 // Write a JavaScript program to convert a string to the number.
 
-function stringNum () {
-  const a = parseInt ("10")
+const stringNum = () => {
+  let string = document.getElementById("stringToNumber").value;
+  const stringToNumber = parseInt(string)
+  document.getElementById("stringNumber").innerHTML = stringToNumber
+  console.log(stringToNumber)
 }
+
+
+
+// function stringNum () {
+//   const a = parseInt ("10")
+// }
 
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
@@ -34,10 +52,10 @@ function stringNum () {
   // * NaN
   // * String
   
-const get_type = (data) =>{
+const getType = (data) =>{
   console.log(typeof(data));
   }
-  get_type(5)
+  getType(5)
 
   
 // Write a JavaScript program that adds 2 numbers together.
