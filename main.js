@@ -8,7 +8,7 @@
 console.log(new Date)
 const displayDate = () => {
   const currentDate = new Date()
-  document.getElementById("display-element").innerHTML = currentDate;
+  document.getElementById("dateShow").innerHTML = currentDate;
 }
  
 
@@ -17,7 +17,7 @@ const displayDate = () => {
 const numString = () => {
   let num = document.getElementById("numberString").value
   const numberToString = num.toString()
-  document.getElementById("number-string").innerHTML = numberToString
+  document.getElementById("stringShow").innerHTML = numberToString
   console.log(numberToString)
 }
 
@@ -33,7 +33,7 @@ const numString = () => {
 const stringNum = () => {
   let string = document.getElementById("stringToNumber").value;
   const stringToNumber = parseInt(string)
-  document.getElementById("stringNumber").innerHTML = stringToNumber
+  document.getElementById("numShow").innerHTML = stringToNumber
   console.log(stringToNumber)
 }
 
@@ -52,19 +52,38 @@ const stringNum = () => {
   // * NaN
   // * String
   
-const getType = (data) =>{
-  console.log(typeof(data));
-  }
-  getType(5)
+const getType = () => {
+  let input = document.getElementById("typeOf").value;
+  const type = typeof(input);
+  document.getElementById("typeShow").innerHTML = type;
+  console.log(type)
+
+}
+
+
+
+// const getType = (data) =>{
+//   console.log(typeof(data));
+//   }
+//   getType(5)
 
   
 // Write a JavaScript program that adds 2 numbers together.
 
-const add = (x, y) => {
-  return (x + y);
-  console.log()
+const addNums = (x,y) => {
+  let x = document.getElementById("numX").value;
+  let y = document.getElementById("numY").value;
+  let addedNums = ("x + y");
+  document.getElementById("showAdd").innerHTML = addedNums;
+  console.log(addedNums);
 }
-add(5,9)
+
+
+// const add = (x, y) => {
+//   return (x + y);
+//   console.log()
+// }
+// add(5,9)
 
 
 // Write a JavaScript program that runs only when 2 things are true.
