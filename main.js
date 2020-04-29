@@ -70,12 +70,10 @@ const getType = () => {
   
 // Write a JavaScript program that adds 2 numbers together.
 
-const addNums = (x,y) => {
-  let x = document.getElementById("numX").value;
-  let y = document.getElementById("numY").value;
-  let addedNums = ("x + y");
-  document.getElementById("showAdd").innerHTML = addedNums;
-  console.log(addedNums);
+const addNumbs = (x,y) => {
+  let sum = parseInt(x) + parseInt(y);
+  document.getElementById("showAdd").innerHTML = sum;
+  console.log(sum);
 }
 
 
@@ -91,8 +89,13 @@ const addNums = (x,y) => {
 // Write a JavaScript program that runs when both things are not true. 
 
 const checkBool = (boolFirst, boolSecond) =>{
+
+  // let boolFirst = document.getElementById("firstBool");
+  // let boolSecond = document.getElementById("secondBool");
+
   if(boolFirst == true && boolSecond == true){
   return "Both values are true";
+  console.log(result)
   }
   else if(boolFirst == false && boolSecond == true || boolFirst == true && boolSecond == false){
   return "Only one of these values are true"
@@ -103,6 +106,8 @@ const checkBool = (boolFirst, boolSecond) =>{
   else{
   return "You did not put a bool in the box! Please only put in either true or false in the input!"
   }
+  // let return = result ""
+  // document.getElementById("boolshow").innerHTML = return
   }
 
 // ***************************

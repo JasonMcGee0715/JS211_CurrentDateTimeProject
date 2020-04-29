@@ -29,7 +29,6 @@
       <button onclick="stringNum()">Convert String to Number</button>
       <input type="text" id="stringToNumber" name="stringToNumber">
       <div id="numShow"></div>
-
     <hr/>
     <hr/>
 
@@ -42,16 +41,19 @@
     <hr/>
 
     <div id="addNum"></div>
-      <button onclick="addNums()">Add these numbers</button>
-      <input type="number" id="numX" name="numX">
-      <input type="number" id="numY" name="numY">
+      <button onclick="addNumbs(document.getElementById('x').value,document.getElementById('y').value)">Add these numbers</button>
+      <input type="number" id="x" name="x">
+      <input type="number" id="y" name="y">
       <div id="showAdd"></div>
 
     <hr/>
     <hr/>
 
     <div id="checkBooleans"></div>
-    <button onclick="checkBool()">Check Booleans</button>
+      <button onclick="checkBool(document.getElementById('boolFirst').value, document.getElementById('boolSecond').value)">Check Booleans</button>
+      <input type="text" id="boolFirst" name="boolFirst">
+      <input type="text" id="boolSecond" name="boolSecond">
+      <div id="boolShow"></div>
 
     <script src="main.js"></script>
   </body>
