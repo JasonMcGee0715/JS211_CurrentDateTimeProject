@@ -17,8 +17,8 @@ const displayDate = () => {
 const numString = () => {
   let num = document.getElementById("numberString").value
   const numberToString = num.toString()
-  document.getElementById("stringShow").innerHTML = numberToString
-  console.log(numberToString);
+  document.getElementById("stringShow").innerHTML = numberToString  + typeof numberToString;
+  console.log(typeof(numberToString));
 }
 
 
@@ -33,8 +33,8 @@ const numString = () => {
 const stringNum = () => {
   let string = document.getElementById("stringToNumber").value;
   const stringToNumber = parseInt(string)
-  document.getElementById("numShow").innerHTML = stringToNumber
-  console.log(stringToNumber)
+  document.getElementById("numShow").innerHTML = stringToNumber  + typeof stringToNumber;
+  console.log(typeof(stringToNumber));
 }
 
 
@@ -53,19 +53,30 @@ const stringNum = () => {
   // * String
   
 
-const getTypeOf = () => {
-  const imput = document.getElementById("typeOf").value;
-  if (input == "true") {
-    console.log("You have a Boolean!")
+const getType = () => {
+  const input = document.getElementById("typeOf").value;
+  if (input == "true") 
+  {
+    document.getElementById("typeShow").innerHTML = "You have a Boolean!"
   }
-  else if (input == "false") {
-    console.log("You have a Boolean!")
+  else if (input == "false") 
+  {
+    document.getElementById("typeShow").innerHTML = "You have a Boolean!"
   }
-  else if (input == "") {
-    console.log("You have a Undefined!")
+  else if (input == "") 
+  {
+    document.getElementById("typeShow").innerHTML = "You are Undefined!"
   }
-  else (input == "null") {
-    console.log("Your input is null")
+  else if (input == "null") 
+  {
+    document.getElementById("typeShow").innerHTML = "Your input is null!"
+  }
+  else if (input <= Number.MAX_VALUE) 
+  {
+    document.getElementById("typeShow").innerHTML = "You have a Number!"
+  }
+  else {
+    document.getElementById("typeShow").innerHTML = "NaN " + typeof input
   }
 }
 
@@ -105,27 +116,28 @@ const addNumbs = (x,y) => {
 // Write a JavaScript program that runs when 1 of 2 things are true.
 // Write a JavaScript program that runs when both things are not true. 
 
-const checkBool = (boolFirst, boolSecond) =>{
+const checkBool = (boolFirst, boolSecond) => {
 
-  // let boolFirst = document.getElementById("firstBool");
-  // let boolSecond = document.getElementById("secondBool");
 
-  if(boolFirst == true && boolSecond == true){
-  return "Both values are true";
-  console.log(result)
+  boolFirst = boolFirst.trim();
+  boolSecond = boolSecond.trim();
+  boolFirst = boolFirst.toLowerCase();
+  boolSecond = boolSecond.toLowerCase();
+
+  if (boolFirst == "true" && boolSecond == "true") {
+    document.getElementById("boolShow").innerHTML = "Both values are true!"
   }
-  else if(boolFirst == false && boolSecond == true || boolFirst == true && boolSecond == false){
-  return "Only one of these values are true"
+  else if (boolFirst == "false" && boolSecond == "true" || boolFirst == "true" && boolSecond == "false") {
+    document.getElementById("boolShow").innerHTML = "Only one value is true!"
   }
-  else if(boolFirst == false && boolSecond == false){
-  return "Both values are false"
+  else if (boolFirst == "false" && boolSecond == "false") {
+    document.getElementById("boolShow").innerHTML = "Both values are false!"
   }
-  else{
-  return "You did not put a bool in the box! Please only put in either true or false in the input!"
+  else {
+    document.getElementById("boolShow").innerHTML = "Not correctly entered!"
   }
-  // let return = result ""
-  // document.getElementById("boolshow").innerHTML = return
-  }
+
+}
 
 // ***************************
 //         PART TWO
