@@ -18,7 +18,7 @@ const numString = () => {
   let num = document.getElementById("numberString").value
   const numberToString = num.toString()
   document.getElementById("stringShow").innerHTML = numberToString
-  console.log(numberToString)
+  console.log(numberToString);
 }
 
 
@@ -52,13 +52,30 @@ const stringNum = () => {
   // * NaN
   // * String
   
-const getType = () => {
-  let input = document.getElementById("typeOf").value;
-  const type = typeof(input);
-  document.getElementById("typeShow").innerHTML = type;
-  console.log(type)
 
+const getTypeOf = () => {
+  const imput = document.getElementById("typeOf").value;
+  if (input == "true") {
+    console.log("You have a Boolean!")
+  }
+  else if (input == "false") {
+    console.log("You have a Boolean!")
+  }
+  else if (input == "") {
+    console.log("You have a Undefined!")
+  }
+  else (input == "null") {
+    console.log("Your input is null")
+  }
 }
+
+
+// const getType = () => {
+//   let input = document.getElementById("typeOf").value;
+//   const type = typeof(input);
+//   document.getElementById("typeShow").innerHTML = type;
+//   console.log(type)
+// }
 
 
 
